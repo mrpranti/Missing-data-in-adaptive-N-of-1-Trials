@@ -17,6 +17,7 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 4 items.
 Database file #1: ref.bib
+Warning--I didn't find a database entry for ""
 You've used 1 entry,
             2118 wiz_defined-function locations,
             513 strings with 4309 characters,
@@ -58,3 +59,4 @@ warning$ -- 0
 while$ -- 3
 width$ -- 2
 write$ -- 13
+(There was 1 warning)

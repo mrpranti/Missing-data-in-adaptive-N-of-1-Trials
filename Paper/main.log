@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.17)  25 NOV 2023 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.17)  26 NOV 2023 12:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -7,10 +7,10 @@ entering extended mode
 (c:/Users/USER1/OneDrive/Documents/Thesis/Wriiting and code/Paper/main.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
-(C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
-Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
-(C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+(C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@chapter=\count186
@@ -65,61 +65,119 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count196
 \l__lipsum_a_int=\count197
 \l__lipsum_b_int=\count198
- (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (main.aux (intro.aux) (methods.aux) (results.aux) (discussion.aux) (conclusion.aux) (Appendix.aux))
+ (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count199
+\Gm@cntv=\count266
+\c@Gm@tempcnt=\count267
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks20
+ (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/emptypage\emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
+) (main.aux (intro.aux) (methods.aux) (results.aux) (discussion.aux) (conclusion.aux) (Appendix.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
  (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count199
-\scratchdimen=\dimen143
+\scratchcounter=\count268
+\scratchdimen=\dimen151
 \scratchbox=\box52
-\nofMPsegments=\count266
-\nofMParguments=\count267
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count268
-\MPscratchDim=\dimen144
-\MPnumerator=\count269
-\makeMPintoPDFobject=\count270
-\everyMPtoPDFconversion=\toks21
+\nofMPsegments=\count269
+\nofMParguments=\count270
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count271
+\MPscratchDim=\dimen152
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
+\everyMPtoPDFconversion=\toks22
 ) (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\USER1\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-0.93083pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=61.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 15.
+(Font)              <12> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 15.
+(Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 15.
- [1
+(Font)              <6> on input line 17.
+[1
+
 
 {C:/Users/USER1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [1
 
+
 ] [2
+
 
 ] [3
 
 ] (main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <7> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
+(Font)              <5> on input line 8.
 )
 \tf@toc=\write3
 \openout3 = `main.toc'.
@@ -132,12 +190,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [5
 
+] (main.lot)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+ [6
+
 ]
 \openout2 = `intro.aux'.
 
  (intro.tex
 Chapter 1.
-) [6
+) [1
+
 
 
 ]
@@ -145,7 +210,7 @@ Chapter 1.
 
  (methods.tex
 Chapter 2.
-) [7
+) [2
 
 
 
@@ -155,7 +220,7 @@ Chapter 2.
 
  (results.tex
 Chapter 3.
-) [8
+) [3
 
 
 
@@ -165,7 +230,7 @@ Chapter 3.
 
  (discussion.tex
 Chapter 4.
-) [9
+) [4
 
 
 
@@ -175,7 +240,7 @@ Chapter 4.
 
  (conclusion.tex
 Chapter 5.
-) [10
+) [5
 
 
 
@@ -185,12 +250,12 @@ Chapter 5.
 
  (Appendix.tex
 Appendix A.
-) [11
+) [6
 
 
 
 
-] (main.bbl) [12
+] (main.bbl) [7
 
 
 
@@ -201,17 +266,17 @@ L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2314 strings out of 475550
- 43081 string characters out of 5762533
- 1918238 words of memory out of 5000000
- 23498 multiletter control sequences out of 15000+600000
+ 2905 strings out of 475550
+ 52610 string characters out of 5762533
+ 1920238 words of memory out of 5000000
+ 24069 multiletter control sequences out of 15000+600000
  563575 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,6n,93p,275b,189s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,6n,93p,296b,189s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/USER1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/USER1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/USER1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/USER1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/USER1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/USER1/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (13 pages, 98437 bytes).
+Output written on main.pdf (14 pages, 101669 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

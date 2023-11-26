@@ -1,7 +1,12 @@
-\contentsline {chapter}{\numberline {1}Introduction}{6}{}%
-\contentsline {chapter}{\numberline {2}Methodology}{7}{}%
-\contentsline {section}{\numberline {2.1}Data}{7}{}%
-\contentsline {chapter}{\numberline {3}Result}{8}{}%
-\contentsline {chapter}{\numberline {4}Discussion}{9}{}%
-\contentsline {chapter}{\numberline {5}Conclusion}{10}{}%
-\contentsline {chapter}{\numberline {A}Appendix}{11}{}%
+\contentsline {chapter}{Abstract}{i}{}%
+\contentsline {chapter}{Dedication}{ii}{}%
+\contentsline {chapter}{Acknowledgements}{iii}{}%
+\contentsline {chapter}{List of Figures}{v}{}%
+\contentsline {chapter}{List of Tables}{vi}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{}%
+\contentsline {chapter}{\numberline {2}Methodology}{2}{}%
+\contentsline {section}{\numberline {2.1}Data}{2}{}%
+\contentsline {chapter}{\numberline {3}Result}{3}{}%
+\contentsline {chapter}{\numberline {4}Discussion}{4}{}%
+\contentsline {chapter}{\numberline {5}Conclusion}{5}{}%
+\contentsline {chapter}{\numberline {A}Appendix}{6}{}%
