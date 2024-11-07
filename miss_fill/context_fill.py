@@ -4,15 +4,15 @@ All the missing value filling methods that's call for the context
 ## libraries
 import pandas as pd
 import numpy as np
-from sklearn.cluster import KMeans # type: ignore
-from sklearn.preprocessing import StandardScaler # type: ignore
+from sklearn.cluster import KMeans 
+from sklearn.preprocessing import StandardScaler 
 
 
 
         
 
 
-def get_context_vectors(self, without_miss_dt, context_cols):
+def get_context_vectors( without_miss_dt, context_cols):
     
     context_vectors = []
     for row in without_miss_dt.itertuples():
@@ -21,7 +21,7 @@ def get_context_vectors(self, without_miss_dt, context_cols):
 
     return (np.array(context_vectors))
 
-def get_distance(self, context_vectors, miss_vec):
+def get_distance( context_vectors, miss_vec):
     
     distances = []
     for vector in context_vectors:
@@ -31,18 +31,18 @@ def get_distance(self, context_vectors, miss_vec):
 
 
 
-def KNN_fill(self, dt_fill = pd.DataFrame, context_cols = list, k = 1): 
+def KNN_fill( dt , context_cols = list, k = 1): 
     # dt is the data Frame
     # context_cols will be list of columns name which are considered as context 
     
-    
+    dt_fill = dt.copy()
     miss_dt = dt_fill[dt_fill['outcome'].isna()]
     without_miss_dt = dt_fill[dt_fill['outcome'].isna() == False].copy()
-    context_vectors = self.get_context_vectors(without_miss_dt, context_cols)
+    context_vectors = get_context_vectors(without_miss_dt, context_cols)
     
     for row in miss_dt.itertuples():
         miss_vec = np.array([getattr(row, col) for col in context_cols])
-        dis = self.get_distance(context_vectors, miss_vec)
+        dis = get_distance(context_vectors, miss_vec)
         without_miss_dt['distance'] = dis
         
         sorted_without_miss_dt = without_miss_dt.sort_values(by = 'distance')
@@ -52,10 +52,11 @@ def KNN_fill(self, dt_fill = pd.DataFrame, context_cols = list, k = 1):
     
     return dt_fill
 
-def cluster_fill(self, dt, context_cols = list, N = 2, m = 1): 
+def cluster_fill(dt, context_cols = list, N = 2, m = 1): 
     # dt is the data Frame
     # context_cols will be list of columns name which are considered as context 
     # N represents the number of clusters for KMean
+    # m represents the number of cluster's means taken in the final weighted mean
     
     dt_fill = dt.copy()
     miss_dt = dt_fill[dt_fill['outcome'].isna()]
@@ -80,7 +81,7 @@ def cluster_fill(self, dt, context_cols = list, N = 2, m = 1):
         miss_vec = np.array([getattr(row, col) for col in context_cols])
         
         ## calculate the distance from the clustres cenroids
-        dis = self.get_distance(centroids, miss_vec)
+        dis = get_distance(centroids, miss_vec)
         dis_dt = pd.Series(dis)
                 
         sorted_dis_dt = dis_dt.sort_values()
@@ -99,7 +100,7 @@ def cluster_fill(self, dt, context_cols = list, N = 2, m = 1):
     
     return dt_fill
 
-def fit_estimate_beta(self,df, context_cols, lamb): ## lamb is the regulization parameter
+def fit_estimate_beta(df, context_cols, lamb): ## lamb is the regulization parameter
     ## prepare for estimator calculate beta
     lambI = np.eye(len(context_cols)+ 1)*lamb
     X = df[context_cols].values
@@ -111,26 +112,26 @@ def fit_estimate_beta(self,df, context_cols, lamb): ## lamb is the regulization 
     
     return beta_DR
 
-def predict(self,beta_DR, X):
+def predict(beta_DR, X):
     """
     Predict target values for given input features X.
     X: numpy array of shape (n_samples, n_features)
     """
     return beta_DR[0] + X.dot(beta_DR[1:])
 
-def DR_fill(self, dt, lamb, context_cols = list): 
+def DR_fill( dt, lamb, context_cols = list): 
     # dt is the data Frame
     # context_cols will be list of columns name which are considered as context 
     
     dt_fill = dt.copy()
     miss_dt = dt_fill[dt_fill['outcome'].isna()]
     without_miss_dt = dt_fill[dt_fill['outcome'].isna() == False].copy()
-    beta_DR = self.fit_estimate_beta(without_miss_dt, context_cols,lamb)
+    beta_DR = fit_estimate_beta(without_miss_dt, context_cols,lamb)
     
     for row in miss_dt.itertuples():
         miss_vec = np.array([getattr(row, col) for col in context_cols])
         
-        fill_value = self.predict(beta_DR, miss_vec)
+        fill_value = predict(beta_DR, miss_vec)
         dt_fill.loc[row.Index,'outcome'] = fill_value
     
     return dt_fill
