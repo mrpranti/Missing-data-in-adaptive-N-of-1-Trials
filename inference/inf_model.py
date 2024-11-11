@@ -55,7 +55,7 @@ class NormalKnownVariance:
         self.df = history
         mean, variance = self.posterior_parameters(number_of_treatments)
         self._debug_data = {"mean": mean, "variance": variance}
-
+        return mean, variance
     def __str__(self):
         return f"NormalKnownVariance({self.prior_mean}, {self.prior_variance}, {self.variance})"
 
