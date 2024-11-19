@@ -15,6 +15,7 @@ class Evaluatemethod:
     def __init__(
         self, 
         t, 
+        block_length,
         length,
         df1, 
         pop_mean = [2,0], 
@@ -24,6 +25,7 @@ class Evaluatemethod:
         number_of_actions = 2
     ):
         self.t = t # t define as the next time cycle after the missing value row
+        self.block_length  = block_length 
         self.length = length
         self.df1 = df1
         self.pop_mean = pop_mean
@@ -81,17 +83,25 @@ class Evaluatemethod:
             if np.isin(id, missing_patient_id).any():
                 next_dt = filled_dt[filled_dt['patient_id'] == id].copy()
           
-                for i in range(self.t, self.length):
+                for i in range(self.t, self.length, self.block_length):
                     history = next_dt.copy()
                     action = tmps.choose_action(history, self.number_of_actions)
-                    next_cycle = self.df1[(self.df1['t']>i-1) & (self.df1['t'] <= i) & (self.df1['patient_id'] == id)].copy()
+                    if self.block_length > 1:
+                        for j in range(self.block_length): 
+                            next_cycle = self.df1[(self.df1['t'] == i+j) & (self.df1['patient_id'] == id)].copy()
                     
-                    # put the choosed action on treatment column
-                    next_cycle.loc[next_cycle.index.values[0], 'treatment'] = action
+                        # put the choosed action on treatment column
+                            next_cycle.loc[next_cycle.index.values, 'treatment'] = action
+                        # new observed outcome to the outcome column
+                            next_cycle.loc[next_cycle.index.values, 'outcome'] =self.observe_outcome(action)
+                            
+                    else:
+                        next_cycle = self.df1[(self.df1['t'] == i) & (self.df1['patient_id'] == id)].copy()
                     
-                    # new observed outcome to the outcome column
-                    next_cycle.loc[next_cycle.index.values[0], 'outcome'] =self.observe_outcome(action)
-                    
+                        # put the choosed action on treatment column
+                        next_cycle.loc[next_cycle.index.values, 'treatment'] = action
+                        # new observed outcome to the outcome column
+                        next_cycle.loc[next_cycle.index.values, 'outcome'] =self.observe_outcome(action)
                     next_dt = pd.concat([next_dt, next_cycle], axis= 0, ignore_index=False) # add the next cycle to the data
                 # add to the main data  
                 new_dt =  pd.concat([new_dt, next_dt], axis= 0, ignore_index=False) 
@@ -124,7 +134,7 @@ class Evaluatemethod:
         mean_1 = []
         var_0 = []
         var_1 = []
-        for i in range(0, self.n_sim):
+        for i in range(self.n_sim):
             new_dt = self.get_newdt(filled_dt, missing_patient_id)
             mean, var = inference_model.update_posterior(new_dt, self.number_of_actions)
             mean_0.append(mean[0])
